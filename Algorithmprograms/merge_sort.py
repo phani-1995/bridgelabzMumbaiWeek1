@@ -27,5 +27,5 @@ def printList(alist):
     for i in range(len(alist)):
         print(alist[i], end='')
     print()
-alist = ("Cricket","Football","Throwball","Basket ball","Kabbadi")
+alist = ["Cricket","Football","Throwball","Basket ball","Kabbadi"]
 mergesort(alist)
