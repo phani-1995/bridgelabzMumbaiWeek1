@@ -34,6 +34,11 @@ def gambler(stake,goal,num_of_times,days):
             else:
                 print("Umlucky day: ", loss)
 
+            if win:
+                print("Play for the next month")
+            else:
+                print("Stop the game ")
+                
 stake = int(input("Enter the amount: "))
 goal = int(input("Enter the amount he want to gain: "))
 num_of_times=int(input("Enter the number of times you want to play: "))
