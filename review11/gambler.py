@@ -1,10 +1,10 @@
 import random
-def gambler(stake,num_of_times,days):
+def gambler(stake,goal,num_of_times,days):
     bet=1
-    win=loss=temp=0
+    win=loss= temp=0
     for i in range(1, num_of_times):
         for j in range(1,days):
-            if (random.random() >= 0.5):
+            if (random.random() >= 0.5):  # if generated random is gt 0.5 gamer wins then stake incremnts by 1  and bets again
                 win = win + 1
                 stake = stake + bet
             if (stake == goal):
@@ -28,7 +28,14 @@ def gambler(stake,num_of_times,days):
 
             print("No.of Wins:", win)
             print("No.of Loss:", loss)
+
+            if win > loss:
+                print("Luckyday:", win)
+            else:
+                print("Umlucky day: ", loss)
+
 stake = int(input("Enter the amount: "))
+goal = int(input("Enter the amount he want to gain: "))
 num_of_times=int(input("Enter the number of times you want to play: "))
 days=int(input("Enter the number of days: "))
-gambler(stake,num_of_times,days)
+gambler(stake,goal,num_of_times,days)
